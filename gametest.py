@@ -1,12 +1,17 @@
+
+#import required directories
 import pygame
 import random
 import sys
 
+#Start new pygame project
 pygame.init()
 
+#game window size
 WIDTH = 800
 HEIGHT = 600
 
+#game window colors/player 1 figure dimensions
 RED = (0,255,247)
 YELLOW = (255, 255, 0)
 BLUE = (255, 147,0)
@@ -14,6 +19,7 @@ BACKGROUND_COLOR = (0,0,0)
 player_size = 10
 player_pos = [WIDTH/2, HEIGHT-3*player_size]
 
+#Enemy dimensions
 enemy_size = 10
 enemy_pos = [random.randint(0,WIDTH-enemy_size), 0]
 enemy_list = [enemy_pos]
@@ -29,6 +35,7 @@ score = 0
 clock = pygame.time.Clock()
 
 myFont = pygame.font.SysFont("monospace", 35)
+
 
 def set_level(score, SPEED):
     if score < 20:
